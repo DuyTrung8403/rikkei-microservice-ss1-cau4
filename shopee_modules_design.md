@@ -1,11 +1,3 @@
-# THIẾT KẾ MODULE NGHIỆP VỤ CHO HỆ THỐNG SHOPEE
-
-**Bối cảnh:** Shopee là một siêu ứng dụng (Super App) với lượng truy cập khổng lồ. Dưới góc độ Kiến trúc sư trưởng, để đảm bảo hệ thống có thể chịu tải và dễ dàng mở rộng, chúng ta cần áp dụng phương pháp phân rã nghiệp vụ (Business Capability Decomposition) để chia nhỏ hệ thống thành các Module/Service độc lập.
-
-Dưới đây là 6 Module (Microservices) cốt lõi thiết yếu nhất tạo nên hệ sinh thái của Shopee, kèm theo trách nhiệm cụ thể của từng phần:
-
----
-
 ### 1. User & Identity Service (Quản lý Tài khoản & Định danh)
 * **Trách nhiệm đảm nhận:** Là "người gác cổng" của Shopee. Quản lý toàn bộ quy trình đăng ký, đăng nhập (Authentication) và phân quyền (Authorization). Nó lưu trữ hồ sơ cá nhân của Người mua (Buyer) và Người bán (Seller), quản lý danh bạ địa chỉ giao hàng, và duy trì phiên đăng nhập của người dùng.
 * **Đặc thù:** Cần chịu tải lượng truy cập khổng lồ vì bất kỳ hành động nào trên app cũng phải đi qua lớp xác thực này.
